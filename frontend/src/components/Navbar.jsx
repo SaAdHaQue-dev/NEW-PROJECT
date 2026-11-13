@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import { Phone, ArrowUpRight, Menu, X, ChevronDown } from 'lucide-react';
 import { websiteData } from '../data/websiteData';
 
-export default function Navbar({ onOpenContact }) {
+export default function Navbar({ onOpenContact, customBrand }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const brand = customBrand || websiteData.brand;
+  const phone = brand?.phone || websiteData.brand.phone;
+  const brandName = brand?.name || websiteData.brand.name;
 
   return (
     <header className="sticky top-0 z-50 pt-3 pb-3 px-4 md:px-8 bg-[#F6F5F0]/95 border-b border-stone-200/50 transition-colors duration-200">
@@ -19,7 +23,7 @@ export default function Navbar({ onOpenContact }) {
             </svg>
           </div>
           <span className="text-2xl font-black tracking-tight text-[#141714] font-['Plus_Jakarta_Sans']">
-            {websiteData.brand.name}
+            {brandName}
           </span>
         </a>
 
@@ -63,11 +67,11 @@ export default function Navbar({ onOpenContact }) {
         {/* Right Section: Call Us & Get In Touch CTA */}
         <div className="hidden sm:flex items-center gap-6">
           <a 
-            href={`tel:${websiteData.brand.phone.replace(/\s+/g, '')}`} 
+            href={`tel:${phone.replace(/\s+/g, '')}`} 
             className="hidden xl:flex items-center gap-2 text-sm font-semibold text-[#141714]/90 hover:text-black transition-colors"
           >
             <span className="text-[#141714]/60 font-normal">Call Us:</span>
-            <span>{websiteData.brand.phone}</span>
+            <span>{phone}</span>
           </a>
 
           <button
@@ -118,11 +122,11 @@ export default function Navbar({ onOpenContact }) {
           
           <div className="pt-4 border-t border-gray-100 flex flex-col gap-3">
             <a 
-              href={`tel:${websiteData.brand.phone.replace(/\s+/g, '')}`} 
+              href={`tel:${phone.replace(/\s+/g, '')}`} 
               className="flex items-center gap-2 text-sm font-semibold text-[#141714]/80 py-1 px-4"
             >
               <Phone className="w-4 h-4 text-[#141714]" />
-              <span>{websiteData.brand.phone}</span>
+              <span>{phone}</span>
             </a>
             <button
               onClick={() => {

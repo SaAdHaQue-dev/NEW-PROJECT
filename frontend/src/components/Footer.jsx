@@ -3,16 +3,22 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { LinkedinIcon, TwitterIcon, InstagramIcon, YoutubeIcon } from './SocialIcons';
 import { websiteData } from '../data/websiteData';
 
-export default function Footer({ onOpenContact }) {
-  const [email, setEmail] = useState('');
+export default function Footer({ onOpenContact, customBrand }) {
+  const [emailInput, setEmailInput] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+
+  const brand = customBrand || websiteData.brand;
+  const phone = brand?.phone || websiteData.brand.phone;
+  const brandEmail = brand?.email || websiteData.brand.email;
+  const address = brand?.address || websiteData.brand.address;
+  const brandName = brand?.name || websiteData.brand.name;
 
   const handleSubscribe = (e) => {
     e.preventDefault();
-    if (email.trim()) {
+    if (emailInput.trim()) {
       setSubscribed(true);
       setTimeout(() => {
-        setEmail('');
+        setEmailInput('');
         setSubscribed(false);
       }, 4000);
     }
@@ -35,7 +41,7 @@ export default function Footer({ onOpenContact }) {
                 </svg>
               </div>
               <span className="text-2xl font-black tracking-tight text-white font-['Plus_Jakarta_Sans']">
-                {websiteData.brand.name}
+                {brandName}
               </span>
             </div>
 
@@ -44,9 +50,9 @@ export default function Footer({ onOpenContact }) {
             </p>
 
             <div className="text-stone-400 text-xs space-y-1 mb-8">
-              <p><strong className="text-white">Headquarters:</strong> {websiteData.brand.address}</p>
-              <p><strong className="text-white">Direct Line:</strong> {websiteData.brand.phone}</p>
-              <p><strong className="text-white">General Inquiries:</strong> {websiteData.brand.email}</p>
+              <p><strong className="text-white">Headquarters:</strong> {address}</p>
+              <p><strong className="text-white">Direct Line:</strong> {phone}</p>
+              <p><strong className="text-white">General Inquiries:</strong> {brandEmail}</p>
             </div>
 
             {/* Social Icons */}
@@ -112,8 +118,8 @@ export default function Footer({ onOpenContact }) {
               <div className="relative">
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={emailInput}
+                  onChange={(e) => setEmailInput(e.target.value)}
                   placeholder="Enter corporate email..."
                   required
                   className="w-full bg-stone-900 border border-stone-800 rounded-2xl px-5 py-3.5 text-sm text-white placeholder-stone-500 focus:outline-none focus:border-[#D4F138] transition-colors pr-12"
