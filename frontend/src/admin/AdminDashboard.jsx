@@ -18,7 +18,7 @@ import ProjectsTab from './tabs/ProjectsTab';
 import InquiriesTab from './tabs/InquiriesTab';
 import SettingsTab from './tabs/SettingsTab';
 
-export default function AdminDashboard({ onLogout, onBackToSite }) {
+export default function AdminDashboard({ onLogout, onBackToSite, onContentSaved }) {
   const [activeTab, setActiveTab] = useState('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [stats, setStats] = useState({ projectCount: 4, inquiryCount: 1 });
@@ -180,7 +180,7 @@ export default function AdminDashboard({ onLogout, onBackToSite }) {
           {activeTab === 'overview' && (
             <OverviewTab stats={stats} onNavigateTab={setActiveTab} />
           )}
-          {activeTab === 'content' && <ContentTab />}
+          {activeTab === 'content' && <ContentTab onSaved={onContentSaved} />}
           {activeTab === 'projects' && <ProjectsTab />}
           {activeTab === 'inquiries' && <InquiriesTab />}
           {activeTab === 'settings' && <SettingsTab />}

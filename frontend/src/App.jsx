@@ -63,6 +63,8 @@ export default function App() {
 
   useEffect(() => {
     refreshData();
+    window.addEventListener('focus', refreshData);
+    return () => window.removeEventListener('focus', refreshData);
   }, [currentView]);
 
   // Listen to hash changes (#admin)
@@ -155,6 +157,7 @@ export default function App() {
         <AdminDashboard 
           onLogout={handleLogout} 
           onBackToSite={handleBackToSite} 
+          onContentSaved={refreshData}
         />
       );
     }
@@ -170,7 +173,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F6F5F0] text-[#141714] font-['Plus_Jakarta_Sans',sans-serif]">
       {/* Top Floating Navbar */}
-      <Navbar onOpenContact={handleOpenContact} />
+      <Navbar onOpenContact={handleOpenContact} customBrand={siteData.brand} />
 
       {/* Main Page Content */}
       <main className="gpu-layer">
@@ -182,7 +185,10 @@ export default function App() {
         />
 
         {/* 3 Landmark Real Estate Projects Bento Cards */}
-        <LandmarkProjects onOpenContact={handleOpenContact} />
+        <LandmarkProjects 
+          onOpenContact={handleOpenContact} 
+          customLandmark={siteData.landmarkSection} 
+        />
 
         {/* Continuous Marquee Ticker Badges */}
         <FeatureTicker />
@@ -213,7 +219,7 @@ export default function App() {
       </main>
 
       {/* Footer with Directory & Newsletter */}
-      <Footer onOpenContact={handleOpenContact} />
+      <Footer onOpenContact={handleOpenContact} customBrand={siteData.brand} />
 
       {/* Interactive Modals */}
       <ContactModal 

@@ -2,8 +2,11 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { websiteData } from '../data/websiteData';
 
-export default function LandmarkProjects({ onOpenContact }) {
-  const { sectionNumber, title, cards } = websiteData.landmarkSection;
+export default function LandmarkProjects({ onOpenContact, customLandmark }) {
+  const section = customLandmark || websiteData.landmarkSection;
+  const sectionNumber = section.sectionNumber || websiteData.landmarkSection.sectionNumber;
+  const title = section.title || websiteData.landmarkSection.title;
+  const cards = section.cards || websiteData.landmarkSection.cards;
 
   return (
     <section id="landmark" className="px-4 md:px-8 py-16 md:py-24">

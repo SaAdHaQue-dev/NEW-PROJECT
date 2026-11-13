@@ -25,8 +25,13 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: [CLIENT_ORIGIN, 'http://localhost:5173', 'http://127.0.0.1:5173'],
-  credentials: true
+  origin: (origin, callback) => {
+    // Allow any origin (deployed frontend on Vercel/Netlify/Render and localhost)
+    return callback(null, true);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

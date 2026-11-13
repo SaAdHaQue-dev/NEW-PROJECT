@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Save, CheckCircle2, RotateCcw } from 'lucide-react';
 import { adminService } from '../adminService';
 
-export default function ContentTab() {
+export default function ContentTab({ onSaved }) {
   const [content, setContent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -35,6 +35,7 @@ export default function ContentTab() {
       const res = await adminService.updateSiteContent(content);
       if (res.success) {
         setMessage('Website content updated successfully! Changes are live.');
+        if (onSaved) onSaved();
         setTimeout(() => setMessage(''), 4000);
       }
     } catch (err) {
