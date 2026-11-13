@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "The Luminara Sky Tower",
+    "category": "Residential",
+    "location": "Hudson Yards, New York",
+    "price": "$2,450,000+",
+    "area": "3,850 sq ft",
+    "beds": "4 Beds",
+    "baths": "4.5 Baths",
+    "completion": "2025",
+    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80",
+    "tag": "Award Winner",
+    "description": "A cantilevered 62-story architectural masterpiece featuring biophilic vertical sky-gardens, private elevator entry, and panoramic panoramic skyline views.",
+    "features": [
+      "Private Sky Terrace",
+      "LEED Platinum Certified",
+      "Valet & 24/7 Concierge",
+      "Infinity Edge Heated Pool"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Solstice Pavilion Headquarters",
+    "category": "Commercial",
+    "location": "South Lake Union, Seattle",
+    "price": "$145,000,000",
+    "area": "480,000 sq ft",
+    "beds": "38 Floors",
+    "baths": "Multi-tenant",
+    "completion": "2024",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+    "tag": "Net Zero Energy",
+    "description": "Next-generation corporate headquarters designed with kinetic solar facades, rainwater harvesting, and timber-hybrid engineering.",
+    "features": [
+      "Solar Facade Array",
+      "Biophilic Atrium",
+      "Auditorium & Innovation Labs",
+      "Direct Transit Link"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Vanguard Eco Coastal Villa",
+    "category": "Eco Villas",
+    "location": "Malibu Coastline, California",
+    "price": "$6,800,000",
+    "area": "5,400 sq ft",
+    "beds": "5 Beds",
+    "baths": "6 Baths",
+    "completion": "2025",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+    "tag": "Exclusive",
+    "description": "Seamless indoor-outdoor oceanfront residence with floor-to-ceiling retractable glass, minimalist limestone finishes, and geothermal climate control.",
+    "features": [
+      "Private Beach Access",
+      "Geothermal Heating",
+      "Wine Cellar & Tasting Room",
+      "Smart Automation OS"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Metropolis Vertex Penthouse",
+    "category": "Penthouses",
+    "location": "Mayfair, Central London",
+    "price": "£4,200,000",
+    "area": "4,100 sq ft",
+    "beds": "3 Beds",
+    "baths": "3.5 Baths",
+    "completion": "2024",
+    "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
+    "tag": "Turnkey Luxury",
+    "description": "Crown jewel duplex penthouse perched over Hyde Park, featuring bespoke Italian marble, custom acoustic engineering, and private rooftop helipad access.",
+    "features": [
+      "Bespoke Italian Marble",
+      "Rooftop Plunge Pool",
+      "Private Wine Gallery",
+      "Direct Park Views"
+    ]
+  }
+]
+

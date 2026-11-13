@@ -1,0 +1,85 @@
+{
+  "brand": {
+    "name": "spaciaz",
+    "tagline": "Landmark Real Estate & Architecture",
+    "phone": "7479468585",
+    "email": "contact@spaciaz.com",
+    "address": "742 Evergreen Terrace, Suite 500, New York, NY 10001"
+  },
+  "hero": {
+    "badge": "ARCHITECTURAL INNOVATION",
+    "titleLine1": "A new",
+    "titleLine2": "standard of",
+    "titleLine3": "excellence",
+    "description": "The largest privately-held real estate investors and managers in the world.",
+    "ctaButton": "View All Services",
+    "yearsExperience": "20+",
+    "yearsLabel": "years of\nexperiences",
+    "towerImage": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+  },
+  "landmarkSection": {
+    "sectionNumber": "01 / 02",
+    "title": "We developed landmark\nreal estate projects",
+    "cards": [
+      {
+        "id": "what-we-do",
+        "tag": "01",
+        "title": "What we do",
+        "description": "We specialize in developing high quality residential and commercial spaces that foster community and elevate lifestyle.",
+        "linkText": "Our Mission",
+        "bgColor": "bg-[#161A16]",
+        "textColor": "text-white",
+        "accentColor": "bg-[#D4F138] text-black",
+        "hasImage": false
+      },
+      {
+        "id": "our-impact",
+        "tag": "02",
+        "title": "Our impact",
+        "description": "Our work attracts leaders and developers to create solutions for modern living spaces.",
+        "linkText": "View Impact",
+        "bgColor": "bg-[#D4F138]",
+        "textColor": "text-[#141714]",
+        "accentColor": "bg-[#141714] text-white",
+        "hasImage": true,
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+        "imageAlt": "Modern glass skyscraper geometric impact"
+      },
+      {
+        "id": "core-values",
+        "tag": "03",
+        "title": "Core values",
+        "description": "Over years of excellence, delivering smart, sustainable developments that inspire community and drive growth.",
+        "linkText": "Our Values",
+        "bgColor": "bg-[#161A16]",
+        "textColor": "text-white",
+        "accentColor": "bg-[#D4F138] text-black",
+        "hasImage": true,
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        "imageAlt": "Architectural modern luxury house"
+      }
+    ]
+  },
+  "statistics": [
+    {
+      "value": "52+",
+      "label": "completed\nprojects",
+      "highlight": true
+    },
+    {
+      "value": "58+",
+      "label": "projects in\ndevelopment",
+      "highlight": false
+    },
+    {
+      "value": "2.8b+",
+      "label": "total projects\ncost ($USD)",
+      "highlight": false
+    },
+    {
+      "value": "18m+",
+      "label": "square feet of\nproperty managed",
+      "highlight": false
+    }
+  ]
+}
